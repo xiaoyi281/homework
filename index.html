@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>古桥数字编年纪系统</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body class="cover-open">
+    <div id="boot">粒子成形中</div>
+    <div id="cover" hidden>
+      <div class="cover-card">
+        <h1 class="cover-title">古桥数字编年纪系统</h1>
+        <ul class="cover-list">
+          <li><span class="cover-icon" aria-hidden="true">🖐</span>模型全方位柔和散开</li>
+          <li><span class="cover-icon" aria-hidden="true">✊</span>逆流重组，进入下一幕</li>
+          <li><span class="cover-icon" aria-hidden="true">👍</span>回到上一幕</li>
+          <li><span class="cover-icon" aria-hidden="true">☝</span>聚成石狮</li>
+          <li><span class="cover-icon" aria-hidden="true">✌</span>聚成莲花</li>
+          <li><span class="cover-icon cover-icon--empty" aria-hidden="true"></span>三指聚成宝塔</li>
+          <li><span class="cover-icon cover-icon--empty" aria-hidden="true"></span>鼠标拖拽旋转，滚轮推进</li>
+        </ul>
+        <button type="button" id="cover-start">开始</button>
+      </div>
+    </div>
+    <aside class="panel">
+      <h1>古桥数字编年纪系统</h1>
+      <ol>
+        <li data-gesture="open">
+          <strong>张开</strong>
+          <span>模型全方位柔和散开</span>
+        </li>
+        <li data-gesture="fist" class="active">
+          <strong>握拳</strong>
+          <span>逆流重组，进入下一幕</span>
+        </li>
+        <li data-gesture="thumb">
+          <strong>点赞</strong>
+          <span>回退到上一幕</span>
+        </li>
+        <li data-gesture="point">
+          <strong>比出 1 指</strong>
+          <span>聚成石狮</span>
+        </li>
+        <li data-gesture="peace">
+          <strong>比耶 2 指</strong>
+          <span>聚成莲花</span>
+        </li>
+        <li data-gesture="three">
+          <strong>比出 3 指</strong>
+          <span>聚成宝塔</span>
+        </li>
+        <li>
+          <strong>鼠标</strong>
+          <span>拖拽旋转，滚轮推进</span>
+        </li>
+      </ol>
+      <div class="meta">当前：<span id="scene-label">古桥</span></div>
+    </aside>
+    <div class="webcam-wrap">
+      <video id="webcam" playsinline muted></video>
+      <div id="camera-state">等待摄像头</div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
